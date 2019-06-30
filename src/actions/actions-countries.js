@@ -5,7 +5,7 @@ export const SEARCH_COUNTRIES = 'SEARCH_COUNTRIES';
 export const SET_CONTINENT = 'SET_CONTINENT';
 
 
-function getCountries() {
+export function getCountries() {
     return {
         type: GET_COUNTRIES
     }

@@ -10,6 +10,11 @@ render(
     <Provider store={store}>
         <div>
             <h1>Inicjalizacja projektu</h1>
+            {store.getState().countries.countries.map(country => (
+                <div key={country.id}>
+                    {country.name}
+                </div>
+            ))}
             <DevTools />
         </div>
         
@@ -17,4 +22,4 @@ render(
     document.getElementById('root')
 );
 
-store.dispatch(getCountries(1));
+store.dispatch(getCountries()); // flow redux devtools pokazuje liste w historii
